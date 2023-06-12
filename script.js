@@ -67,7 +67,7 @@ document.getElementById('btnRetry').addEventListener('click', function () {
     gameRun = true;
 
     orderNumberField.innerText = orderNumber;
-    answerField.innerText = `Вы загадали число ${answerNumber}?`;
+    answerField.innerText = `Вы загадали число ${numberToText(answerNumber)}?`;
 })
 
 document.getElementById('btnOver').addEventListener('click', function () {
