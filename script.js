@@ -1,20 +1,20 @@
 let minValue = parseInt(prompt('Минимальное значение числа для игры','0')) || 0;
 let maxValue = parseInt(prompt('Максимальное значение числа для игры','100')) || 100;
 
-if (isNaN(minValue)) {
-    minValue = 0;
-}
-
-if (isNaN(maxValue)) {
-    maxValue = 100;
-}
-
 minValue = (minValue < -999) ? -999 : (minValue > 999) ? 999 : minValue;
 maxValue = (maxValue < -999) ? -999 : (maxValue > 999) ? 999 : maxValue;
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
 let gameRun = true;
+
+if (isNaN(minValue)) {
+  minValue = 0;
+}
+
+if (isNaN(maxValue)) {
+  maxValue = 100;
+}
 
 const orderNumberField = document.getElementById('orderNumberField');
 const answerField = document.getElementById('answerField');
